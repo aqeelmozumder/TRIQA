@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Game";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<script src="~/js/site.js"></script>
+<script src="~/js/Draw.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.js"></script>
+<script>
+    window.onbeforeunload = function () {
+        return "You will lose this game if you leave";
+    };
+</script>
+
+<link rel="stylesheet" href="~/css/site.css">
+<script>
+    function clearCanvas() {
+
+        var canvaso = document.getElementById(cur_canvaso);
+        contexto = canvaso.getContext('2d');
+        contexto.clearRect(0, 0, canvaso.width, canvaso.height);
+    }
+</script>
+
+
+<br>
+<br>
+
+<title>Game</title>
+
+<body onload="getGameCode(); getPlayers(); getHost();">
+
+    <h2 id="round_id" class="container">Welcome to the Game</h2>
+    <div id="lobby">
+        <h3 id="game_code"></h3>
+
+        <div id="div_players">
+            <br />
+            <b>Players:</b>
+            <div id="player_list">
+            </div>
+        </div>
+        <br/>
+        <button id="next_round" class="btn btn-success" onclick="startGame()"></button>
+    </div>
+    <div id="round_content" class="container"></div>
+    <h2 id="timer" class="container"></h2>
+</body>
+
+

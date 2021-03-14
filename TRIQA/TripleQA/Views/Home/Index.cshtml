@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="~/js/PreGame.js"></script>
+
+<style>
+
+</style>
+
+
+<body id="body">
+    <br />
+    <br /><br />
+    <br />
+    <div class="jumbotron" style="background-color:rgba(255,255,255,0);">
+        <div id="add_player">
+            <input id="nickname" type="text" class="dark" placeholder="Enter Name" />
+        </div>
+        <br />
+        <br />
+        <p style="color:white"><b>THEN</b></p>
+
+        <div class="row">
+            <br />
+
+            <div style="display:inline-block">
+                <input id="game_code" type="text" maxlength="8" class="dark" placeholder="Enter Game Code" />
+                <button onclick="checkGameCode();" class="btn btn-success">Join</button>
+            </div>
+
+            <br />
+            <br />
+            <p style="color:white"><b>OR</b></p>
+
+
+            <div style="display:inline-block">
+                <button id="Createbutton" onclick="CreateGame()" class="btn btn-group-justified bg-primary">Create New Game</button>
+            </div>
+
+        </div>
+        <br />
+        <br />
+    </div>
+
+
+
+
+</body>
